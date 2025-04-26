@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uop_rwk_day3/screens/dynamic_listview_screen.dart';
 import 'package:uop_rwk_day3/screens/listview_demo1_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ListviewDemo1Screen(),
+      home: const DynamicListviewScreen(),
     );
   }
 }
