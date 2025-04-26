@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uop_rwk_day3/screens/button_demo_screen.dart';
 import 'package:uop_rwk_day3/screens/dynamic_gridview.dart';
 import 'package:uop_rwk_day3/screens/dynamic_listview_screen.dart';
 import 'package:uop_rwk_day3/screens/listview_demo1_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const DynamicGridview(),
+      home: const ButtonDemoScreen(),
     );
   }
 }
