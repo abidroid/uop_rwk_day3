@@ -4,6 +4,7 @@ import 'package:uop_rwk_day3/screens/dynamic_gridview.dart';
 import 'package:uop_rwk_day3/screens/dynamic_listview_screen.dart';
 import 'package:uop_rwk_day3/screens/listview_demo1_screen.dart';
 import 'package:uop_rwk_day3/screens/simple_gridview.dart';
+import 'package:uop_rwk_day3/screens/stf_screen_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ButtonDemoScreen(),
+      home: const StfScreenDemo(),
     );
   }
 }
