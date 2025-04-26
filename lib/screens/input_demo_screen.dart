@@ -9,6 +9,11 @@ class InputDemoScreen extends StatefulWidget {
 }
 
 class _InputDemoScreenState extends State<InputDemoScreen> {
+
+  String fullName = "Fullname: ";
+  TextEditingController firstController = TextEditingController();
+  var lastController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,51 +27,42 @@ class _InputDemoScreenState extends State<InputDemoScreen> {
 
           children: [
             TextField(
-
+              controller: firstController,
               decoration: InputDecoration(
-                hintText: 'Full Name',
+                hintText: 'First Name',
                 border: OutlineInputBorder(),
-                labelText: 'Full Name',
+                labelText: 'First Name',
                 prefixIcon: Icon(Icons.person)
               ),
             ),
 
             SizedBox(height: 16,),
             TextField(
-              keyboardType: TextInputType.phone,
-              maxLength: 11,
-              decoration: InputDecoration(
-                  hintText: 'Mobile Number',
-                  border: OutlineInputBorder(),
-                  labelText: 'Mobile Number',
-                  prefixIcon: Icon(Icons.phone)
-              ),
-            ),
+              controller: lastController,
 
-            SizedBox(height: 16,),
-            TextField(
-              obscureText: true,
-              obscuringCharacter: '#',
               decoration: InputDecoration(
-                  hintText: 'Password',
+                  hintText: 'Last Name',
                   border: OutlineInputBorder(),
-                  labelText: 'Password',
-                  prefixIcon: Icon(Icons.lock),
-                suffixIcon: Icon(Icons.visibility),
+                  labelText: 'Last Name',
+                  prefixIcon: Icon(Icons.person)
               ),
             ),
 
             SizedBox(height: 16,),
 
-            TextField(
-              maxLines: 6,
-              decoration: InputDecoration(
-                  hintText: 'Remarks',
-                  border: OutlineInputBorder(),
-                  labelText: 'Remarks',
+            ElevatedButton(onPressed: (){
 
-              ),
-            ),
+              String firstName = firstController.text.trim();
+              String lastName = lastController.text.trim();
+
+              setState(() {
+                fullName = "$firstName $lastName";
+              });
+
+            }, child: const Text('Combine')),
+            SizedBox(height: 16,),
+
+            Text(fullName),
           ],
         ),
       ),
